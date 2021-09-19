@@ -1,0 +1,76 @@
+// from : https://www.youtube.com/watch?v=k5E2AVpwsko&t=0s
+
+Angular : A framework for building client applications in HTML, CSS, and 
+JavaScript/TypeScript
+
+Benefits:
+- gives our applications a clean structure (loosely coupled, easy to
+understand and maintain)
+- includes a lot of re-usable code (utility method (eg: navigation and browser history))
+- makes applications more testable (automation)
+
+architecture: 
+-front end (User Interface (UI)) (HTML, CSS, TypeScript, Angular) :
+HTML templates & presentation logic
+-back-end (Data and processing) Webserver : Data + APIs : Business logic
+
+HTTP Services / APIs - Endpoints that are accessible via the HTTP protocol
+
+TypeScript : compiles in JavaScript
+
+Node : run time environment to execute JS outside the browser.
+install Node
+check Node version: node --version
+
+Node Package Manager (NPM): tool in node to install external libraries
+
+Angular CLI : tool to create new angular project, generate some boilerplate code, create deployable packages
+
+install Angular CLI: npm install -g @angular/cli
+
+check Angular version: ng --version
+
+create new project: ng new <project name>
+
+shift + ctrl + p => install command palette in VSCode
+>code ==> Shell Command: Install 'code' command in PATH
+execute code .create
+
+cd to created project
+load our application in a webserver: ng serve
+Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/
+
+Basic structure of an application:
+    -e2e : end-to-end test (not available in latest versions)
+    -node_modules : third party libraries this module depends on. parts of third party libraries used are
+    put into a bundle and deployed in an application server. this will not be deployed 
+    -src : where src exists
+        -app : modules and components are available inside this. There should be at least one component
+               and one module
+        -assets : static assets (Eg: image file, text file, icon)
+        -environments : configurations for different environments. one for production and another for development environment
+        -index.html : references for css and scripts are dynamically inserted into the page
+        -main.ts : typescript file - starting point of the application (just like in Java and C: main method)
+            bootstrapping the main module of a application. Angular loads (AppModule) and gets execute program
+        -polyfills.ts : import scripts required to running in Angular.
+            Angular framework uses the features of JavaScript that are not available in the current version of JavaScript supported in most browsers out there. It is used to fill the gap of features of JS Angular needs and the features of JS browser supports.
+        -style.css : Global styles for application. Other than this, each component can have its own styles.
+        -test.ts : used to setting up a testing environment
+    -angular.json : configuration file for angular cli - standard
+    -editorconfig : to make sure all the developers in the team uses same editor configuration
+    -gitignore : to exclude certain folders and files from git repository
+    -karma.conf.js : a test runner for javascript
+    -package.json : a standard file with every node project.
+        basic settings of name and the version of the application
+        dependencies : libraries your application dependant upon
+            @angular/animations : if no animation in your project, it can be deleted
+        devDependencies : not used to run. used to develop an application
+        protractor.conf.js : tool to run an end to end test for Angular (not available in latest versions)
+        tsconfig.json : contains bunch of settings for TypeScript compiler. TypeScript compiler will
+            check this file and compile the TypeScript code to JS, based on the settings in this file, to 
+            be understood by browsers
+        tslint.json : settings for tslint (not available in latest versions) - static analysis tool for
+            TypeScript code (just like SonarLint for Java). check TS code for readability, maintainability
+            and functionality errors
+        
+        
