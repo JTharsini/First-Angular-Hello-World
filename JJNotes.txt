@@ -72,5 +72,96 @@ Basic structure of an application:
         tslint.json : settings for tslint (not available in latest versions) - static analysis tool for
             TypeScript code (just like SonarLint for Java). check TS code for readability, maintainability
             and functionality errors
-        
-        
+
+Compilation:
+    vendor.js : includes all the third party libraries
+    polyfills.js : filling the gaps
+    main.js : sourcecode of application
+    styles.css : style sheets
+
+Hot Module Replacement (HMR) : When sourcecode gets modifying, web-pack automatically refreshes the browser.
+
+inspecting html page : generated bundles are added as <script src="main.js" defer=""></script>
+to index.html. This happens runtime. web-pack automatically injects its generated scripts to index.html.
+All the css files are bundled into js file.
+
+Angular libraries: (distributed as separate node packages via npm)
+    @angular/core - use in every application
+    @angular/compiler - to generate js bundles
+    @angular/http - to call http services
+    @angular/router - to add navigation to applications
+
+AngularJS (first generation (1.x) - written in JS - will be faded sooner)
+Angular2 => (with Typescript. JS part of the name was dropped then. no Angular3 (to have 
+    same versions for core, compiler, http and router skipped Angular3 & released Angular4
+    with same version of those libraries))
+
+Levels of Angular knowledge:
+    -Essentials :
+        -Fundamentals of TypeScript and object-oriented programming
+        -Angular Fundamentals
+        -Displaying data and handling events
+        -Components
+        -Directives
+        -Template-driven forms
+        -Reactive forms
+        -Consuming HTTP services
+        -Routing and navigation
+        -Authentication and authorization
+        -Deployment
+        -Building real-time, serverless applications with Firebase 
+    
+    -Advanced Topics :
+        -Animations
+        -Angular Material
+        -Redux
+        -Unit testing
+        -Integration testing
+
+TypeScript : written using JS and having extra features
+    which are not supported by most of the current
+    browsers. SuperSet of JS (any JS can be run in TypeScript)
+
+    features:
+        -strong or static typing 
+            (optional in TypeScript)
+            (helps to have predictable and debuggable
+            application)
+        -object oriented features
+            (class, interface & etc)
+        -most of the errors can be caught in compile time
+        -great tooling (more intelligent editors)
+
+TypeScript code will be transpiled to JavaScript 
+to support browsers
+
+install TypeScript : npm install -g typescript
+
+check TypeScript compiler version : tsc --version
+
+create ts file and open it in VSCode : code main.ts
+
+compile TypeScript to JavaScript : tsc main.ts
+file named main.js created
+
+when "ng serve" is getting executed, TypeScript compiler is being invoked internally.
+
+run TypeScript file: node main.ts
+
+JS versions:
+
+-ES5 (ECMAScript 5) : supported by all browsers
+-ES6 (2015) : ECMAScript 2015
+-ES2016
+-ES2017
+
+compile and run together: tsc main.ts | node main.js
+
+even though there is compile error, it generates
+JS file. because, by default tsc uses ES5. There is no
+let keyword in ES5. that's why generating file
+
+concept of enum can be implemented in JavaScript with
+function and array. TypeScript makes all those things
+easier.
+
