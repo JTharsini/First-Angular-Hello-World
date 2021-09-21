@@ -178,10 +178,22 @@ Component : encapsulates data, HTML template and logic for a view
 
 Module: container for group of releated components. Every Angular application has at least one module, app module.
 
+Template
+
 components usage:
 -create, register in a module, add an element in an HTML markup
 
 auto import plugin helps to import components itself
 
 When <courses></courses> is there, angular displays template of the component
+
+problem in this approach: more steps
+if don't register a component : "courses" is not a known element
+
+generate a new component called course:
+ng g c course (g - generate, c - component)
+
+<h2>{{title}}</h2> : data binding
+whenever title value changes, Angular changes
+by refreshing the page
 
