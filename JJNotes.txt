@@ -165,3 +165,23 @@ concept of enum can be implemented in JavaScript with
 function and array. TypeScript makes all those things
 easier.
 
+in TypeScript, we have modules, classes, variables, functions are considered as modules if they have
+export keyword. in Angular, those are combined into node modules. Those node modules will be considered as
+modules. They are imported and used.
+
+Building blocks of an Angular application are component, module,
+
+Component : encapsulates data, HTML template and logic for a view
+        example: Udemy site - navigation bar is a component, a course is a component having rating component.
+        every Angular application has at least one component, app component or root component. A real world
+        Angular application is a tree of components starting from app component.
+
+Module: container for group of releated components. Every Angular application has at least one module, app module.
+
+components usage:
+-create, register in a module, add an element in an HTML markup
+
+auto import plugin helps to import components itself
+
+When <courses></courses> is there, angular displays template of the component
+
