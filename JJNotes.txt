@@ -169,7 +169,7 @@ in TypeScript, we have modules, classes, variables, functions are considered as 
 export keyword. in Angular, those are combined into node modules. Those node modules will be considered as
 modules. They are imported and used.
 
-Building blocks of an Angular application are component, module,
+Building blocks of an Angular application are component, module, directive && service
 
 Component : encapsulates data, HTML template and logic for a view
         example: Udemy site - navigation bar is a component, a course is a component having rating component.
@@ -197,3 +197,25 @@ ng g c course (g - generate, c - component)
 whenever title value changes, Angular changes
 by refreshing the page
 
+Advantage of backtik character instead for single quote or double quote:
+can break string literal into multiple line
+
+Directive: to manipulate DOM.
+(add or remove or change the class or style of a DOM element)
+whenever a directive modify the structure of a DOM
+then need to prefix it with *
+Eg: ngFor
+
+Service: (HTTP call)
+-make component unit testable
+-make code reusable
+-separation of concern (otherwise tightly coupled)
+
+Dependency injection:
+if dependency is not provided in providers of app.module.ts
+By default, injecting dependencies are singleton (single instance)
+"No provider for CoursesService"
+
+quick way to create service: ng g s email // email is the service name
+
+@Component includes @Injectable annotation
